@@ -1,0 +1,16 @@
+[package]
+name = "rustc_panic"
+version = "0.0.1"
+authors = ["Gleb Pomykalov <gleb@pomykalov.ru>"]
+description = "Rustc Panic"
+publish = false
+
+[dependencies]
+binary_macros = "0.6"
+
+[lib]
+name = "rustc_panic"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[profile.release]
+lto = true
